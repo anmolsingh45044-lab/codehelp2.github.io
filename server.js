@@ -94,6 +94,10 @@ app.post('/api/auth/login', async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 });
 
+app.get("/", (req, res) => {
+    res.send("CodeSolve API is running 🚀");
+});
+
 // ── Routes: Dashboard ────────────────────────────────────
 app.get('/api/user/dashboard', auth, async (req, res) => {
   try {
